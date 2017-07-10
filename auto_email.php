@@ -22,7 +22,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				
+				<p>Dear <?php echo $_GET['first_name']; ?>,</p>
+				<p>We wanted to show our appriciation for purchasing the <?php echo $_GET['products_purchased'] ?>. We wanted to recommend a few items that you might be interested in. In addition please check out company catalog for more info on products we carry. If you have any questions please feel free to contact customer car department and we would be happy to assist you.</p>
+				<p>Sincerely,<br />
+				Material Flow and Conveyor Systems</p>
+				<p>If you do not wish to recieve any further emails please click link below to be remove from our mailing list.</p>
 			</div>
 		</div>
 	</div>	

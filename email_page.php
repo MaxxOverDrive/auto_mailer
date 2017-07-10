@@ -25,9 +25,10 @@
 					<p><textarea rows="20" cols="70" name="message"></textarea></p>
 					<div class="form-group">
 					<input class='btn btn-danger' type="reset" name="reset" />
-					<input class='btn btn-info' type="submit" name="submit" />
+					<input class='btn btn-info' type="submit" name="submit" onClick="mail_sender()" />
 					</div>
 				</form>
+				<a href="remove.php" onClick="listRemove()">Remove from mailing list</a>
 			</div>
 		</div>
 	</div>	

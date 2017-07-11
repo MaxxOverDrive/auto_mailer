@@ -2,35 +2,35 @@
 
 <?php
 
-$first_name=$_POST['first_name'];
-$products_purchased=$_POST['products_purchased'];
-$email=$_POST['email'];
-$mailingList=$_POST['mailingList'];
+$shipFirst=$_POST['shipFirst'];
+$shipLast=$_POST['shipFirst'];
+$shipEmail=$_POST['shipEmail'];
 
-$query = mysql_query($connect, "SELECT first_name, products_purchased, email, mailingList FROM email_generator)
-VALUES('$first_name', '$products_purchased', '$email', '$mailingList'");
+$query = mysql_query($connect, "SELECT shipFirst, shipLast, shipEmail FROM cart_paypal_orders)
+VALUES('$shipFirst', '$shipLast', '$shipEmail'");
 
-	$numRow = ("SELECT COUNT(id) FROM email_generator;");
+	$numRow = ("SELECT COUNT(orderID) FROM cart_paypal_orders;");
 	$i = 0;
 	$totalSent= 0;
 
 	function mail_sender() {
-		while($i <= $numRow) {
-
-			if($mailingList == 'Yes') {
-				echo = $_POST('first_name');
-				echo = $_POST('products_purchased');
-				mail($email, $message, "From:".$from);
+		while($i <= 100) {
+			echo = $_POST('shipEmail');
+			$i++;
+			$totalSent++;
+			/*if($mailingList == 'Yes') {
+				echo = $_POST('shipFirst');
+				//mail($shipEmail, $message, "From:".$from);
 				$i++;
 				$totalSent++;
-			}
-			if else($numRow > $i) {
+			}*/
+			/*if else($numRow > $i) {
 
 				echo "Your Emails have been sent!";
 			}
 			else {
 				echo "Your Emails have not been sent!";
-			}
+			}*/
 		}
 }
 function listRemove() {
